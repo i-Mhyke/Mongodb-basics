@@ -4,7 +4,8 @@ const updateDocument = function(db, callback){
 	const moviesCollection = db.collection('myMovies');
 
 	moviesCollection.updateOne({movie: "The Banker"},
-     { $set: {movie: "Logan", year: "2017", rating: 8.1} }, function(err, result) {
+     { $set: {movie: "Logan", year: "2017", rating: 8.1} }, 
+     function(err, result) {
     assert.equal(err, null);
     assert.equal(1, result.result.n);
 
